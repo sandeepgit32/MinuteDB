@@ -1,4 +1,5 @@
 # MinuteDB
+![MinuteDB](logo.png "MinuteDB")
 
 MinuteDB is a simple local database written in Python that provides basic CRUD (Create, Read, Update, Delete) operations on a local file-based database. It is designed to be lightweight and easy to use.
 
