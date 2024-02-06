@@ -24,6 +24,7 @@ class MinuteDB:
                 raise KeyError(f"The table '{table_name}' does not exist.")
             else:
                 self._load_data()
+                self.primary_key = self.data.get("__primary_key__")
 
     def _create_table(self):
         data_table_path = os.path.join(DB_DIR, self.table_name)

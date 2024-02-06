@@ -1,5 +1,5 @@
-import unittest
 import os
+import unittest
 from src.minutedb.minutedb import MinuteDB
 
 class TestMinuteDB(unittest.TestCase):
@@ -10,12 +10,12 @@ class TestMinuteDB(unittest.TestCase):
 
     def tearDown(self):
         # Clean up test data
-        if os.path.exists("db/test_table/data.json"):
-            os.remove("db/test_table/data.json")
-        if os.path.exists("db/test_table/data.json.lock"):
-            os.remove("db/test_table/data.json.lock")
-        if os.path.exists("db/test_table"):
-            os.rmdir("db/test_table")
+        if os.path.exists(os.path.join("db", "test_table", "data.json")):
+            os.remove(os.path.join("db", "test_table", "data.json"))
+        if os.path.exists(os.path.join("db", "test_table", "data.json.lock")):
+            os.remove(os.path.join("db", "test_table", "data.json.lock"))
+        if os.path.exists(os.path.join("db", "test_table")):
+            os.rmdir(os.path.join("db", "test_table"))
 
     def test_create_item(self):
         data = {"id": "1", "name": "Alice", "age": 30, "height": 6.1}
@@ -51,5 +51,5 @@ class TestMinuteDB(unittest.TestCase):
         with self.assertRaises(KeyError):
             self.db.get_item("1")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
