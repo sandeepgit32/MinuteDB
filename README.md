@@ -1,6 +1,9 @@
 # MinuteDB
 ![MinuteDB](logo.png "MinuteDB")
 
+![PyPI - Version](https://img.shields.io/pypi/v/MinuteDB?style=flat&logo=pypi)
+
+
 MinuteDB is a simple local database written in Python that provides basic CRUD (Create, Read, Update, Delete) operations on a local file-based database. It is designed to be lightweight and easy to use.
 
 ## Installation
@@ -25,7 +28,7 @@ db = MinuteDB(<table_name>, <primary_key>)
 # Example:
 db = MinuteDB("users", "name")
 ```
-If the table already exist, then the primary key need not be specified.
+If the table already exists, then the primary key need not be specified.
 ```python
 # Format: 
 db = MinuteDB(<table_name>)
