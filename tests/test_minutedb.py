@@ -1,6 +1,6 @@
 import os
 import unittest
-from src.minutedb.minutedb import MinuteDB
+from src.minutedb import MinuteDB
 
 class TestMinuteDB(unittest.TestCase):
 
